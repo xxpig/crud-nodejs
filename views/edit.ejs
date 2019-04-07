@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Editar] CRUD - NodeJS</title>
+  <link type="text/css" href="/public/assets/main.css" rel="stylesheet">
+</head>
+<body>
+   <div class='bold-line'></div>
+    <div class='container'>
+      <div class='window'>
+        <div class='overlay'></div>
+          <div class='content'>
+            <div class='welcome'>CRUD</div>
+              <div class='welcome2'>Editar</div>
+    <% data.forEach(function(details) { %>
+        <form action="/edit/<%= details._id %>" method="POST"class="input-fields">
+        <input type="text" value="<%= details.name %>" name="name" class='input-line full-width'>
+        <input type="email" value="<%= details.email %>" name="email" class='input-line full-width'>
+        <br/>
+        <button type="submit" class='ghost-round full-width'>Salvar</button></br>
+        <button href="/show" class='ghost-roundd full-width'>Ver Todos</button>
+        </form>
+    <% }) %>
+          </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

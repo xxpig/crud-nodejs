@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>[Usuários] CRUD - NodeJS</title>
+    <link type="text/css" href="/public/assets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class='bold-line'></div>
+    
+    <div class='container'>
+      <div class='window'>
+        <div class='overlay'></div>
+          <div class='content'>
+            <div class='welcome'>CRUD</div>
+              <div class='welcome2'>Usuários</div>
+                <div style="overflow:scroll;height:250px;width:100%;overflow:auto">
+                  <table width="300" border="0">
+                  <% data.forEach(function(details) { %>
+                  <tr>
+                  <td><%= details.name %><br/><%= details.email %></td>
+                  <td><a href="/edit/<%= details._id %>"class="material-icons material-color">edit</i>
+                  </a><a href="/delete/<%= details._id %>"class="material-icons">delete_forever</a></td>
+                  </tr>
+                  <% }) %>
+                  </table>
+                </div>
+                <button class='ghost-round full-width'> <a href="/">Registrar</a></button>
+              </div>
+            </div>
+
+</body>
+</html>
+
